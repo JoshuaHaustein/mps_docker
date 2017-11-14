@@ -6,8 +6,10 @@ git clone <this-repo>
 cd <this-repo>
 git submodule init
 git submodule update --recursive
-
 ```
+
+Follow the instructions on https://github.com/JoshuaHaustein/box2d_catkin/blob/master/README.md how to properly
+set up the folder ```box2d_catkin```. Start from the ```git submodule``` section.
 
 Build and run the docker image:
 
