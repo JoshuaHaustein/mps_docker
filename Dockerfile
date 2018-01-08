@@ -2,6 +2,7 @@ FROM ros:lunar-ros-base-zesty
 
 RUN apt-get update && apt-get install -y \
     git \
+    gdb \
     ssh \
     wget \
     tmux \
@@ -9,6 +10,7 @@ RUN apt-get update && apt-get install -y \
     libboost-mpi-python-dev \
     libyaml-cpp-dev \
     libeigen3-dev \
+    python3-pip \
     qt4-dev-tools \
     libprotobuf-dev \
     protobuf-compiler \
@@ -19,6 +21,9 @@ RUN apt-get update && apt-get install -y \
 
 RUN ln -s /usr/bin/clang++-3.8 /usr/bin/clang++
 RUN ln -s /usr/bin/clang-3.8 /usr/bin/clang
+
+# Install python dependencies
+RUN /usr/bin/pip3 install jinja2
 
 # Install OMPL
 ARG OMPL_DIR=/ompl
