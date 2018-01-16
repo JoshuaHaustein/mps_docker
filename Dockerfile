@@ -52,7 +52,7 @@ USER ros
 WORKDIR $WS/src
 RUN /bin/bash -c '. /opt/ros/lunar/setup.bash; catkin_init_workspace'
 WORKDIR $WS
-RUN /bin/bash -c '. /opt/ros/lunar/setup.bash; catkin_make'
+RUN /bin/bash -c '. /opt/ros/lunar/setup.bash; catkin_make -DCMAKE_BUILD_TYPE=Release'
 RUN /bin/bash -c 'echo source ${WS}/devel/setup.bash >> /home/ros/.bashrc'
 
 USER root
