@@ -37,8 +37,6 @@ RUN useradd -ms /bin/bash ros
 ARG WS=/home/ros/catkin_ws
 WORKDIR $WS
 RUN mkdir src
-ADD run_experiments.sh          ./
-RUN chmod +x run_experiments.sh
 WORKDIR $WS/src
 ADD planning_catkin             planning_catkin
 ADD box2d_catkin                box2d_catkin
