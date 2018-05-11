@@ -38,7 +38,7 @@ ARG WS=/home/ros/catkin_ws
 WORKDIR $WS
 RUN mkdir src
 WORKDIR $WS/src
-ADD planning_catkin             manipulation_planning_suite
+ADD manipulation_planning_suite manipulation_planning_suite
 ADD box2d_catkin                box2d_catkin
 ADD box2d_sim_env               box2d_sim_env
 ADD planner_tests               planner_tests

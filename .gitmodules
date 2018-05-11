@@ -14,5 +14,5 @@
 	path = box2d_sim_env
 	url = git@gits-15.sys.kth.se:haustein/box2d_sim_env.git
 [submodule "manipulation_planning_suite"]
-	path = planning_catkin
+	path = manipulation_planning_suite
 	url = git@gits-15.sys.kth.se:haustein/manipulation_planning_suite.git
