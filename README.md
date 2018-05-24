@@ -2,7 +2,7 @@
 We provide a Dockerfile to ease installation. In order to be able to use the Dockerfile, you need to have
 [Docker](https://www.docker.com/community-edition) installed on your system. 
 
-To install, pull this repository and fetch all submodules
+To install the planner, pull this repository and fetch all submodules
 ```
 git clone <this-repo>
 cd <this-repo>
