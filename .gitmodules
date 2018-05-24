@@ -1,18 +1,18 @@
 [submodule "oracle_server"]
 	path = oracle
-	url = git@gits-15.sys.kth.se:isacar/oracle_server.git
+	url = git@github.com:JoshuaHaustein/oracle_server.git
 [submodule "box2d_catkin"]
 	path = box2d_catkin
 	url = git@github.com:JoshuaHaustein/box2d_catkin.git
 [submodule "planner_tests"]
 	path = planner_tests
-	url = git@gits-15.sys.kth.se:haustein/planner_tests.git
+	url = git@github.com:JoshuaHaustein/planner_tests.git
 [submodule "sim_env"]
 	path = sim_env
-	url = git@gits-15.sys.kth.se:haustein/sim_env.git
+	url = git@github.com:JoshuaHaustein/sim_env.git
 [submodule "box2d_sim_env"]
 	path = box2d_sim_env
-	url = git@gits-15.sys.kth.se:haustein/box2d_sim_env.git
+	url = git@github.com:JoshuaHaustein/box2d_sim_env.git
 [submodule "manipulation_planning_suite"]
 	path = manipulation_planning_suite
-	url = git@gits-15.sys.kth.se:haustein/manipulation_planning_suite.git
+	url = git@github.com:JoshuaHaustein/manipulation_planning_suite.git
