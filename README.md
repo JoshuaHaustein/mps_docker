@@ -1,4 +1,4 @@
-**Installation**:
+## Installation
 We provide a Dockerfile to ease installation. In order to be able to use the Dockerfile, you need to have
 [Docker](https://www.docker.com/community-edition) installed on your system. 
 
@@ -19,7 +19,7 @@ Build and run the docker image:
 docker build . -t planner
 docker run -it -e DISPLAY=$DISPLAY -e QT_X11_NO_MITSHM=1 -v /tmp/.X11-unix:/tmp/.X11-unix planner bash
 ```
-
+## Running the planner
 Inside the container, you can then run for example:
 ```
 rosrun planner_tests box2d_push_planner --planning_problem src/planner_tests/data/box2d/planning_problems/slalom.yaml
