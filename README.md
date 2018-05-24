@@ -1,6 +1,8 @@
-Installation:
+**Installation**:
+We provide a Dockerfile to ease installation. In order to be able to use the Dockerfile, you need to have
+[Docker](https://www.docker.com/community-edition) installed on your system. 
 
-Pull this repository and fetch all submodules
+To install, pull this repository and fetch all submodules
 ```
 git clone <this-repo>
 cd <this-repo>
@@ -20,5 +22,7 @@ docker run -it -e DISPLAY=$DISPLAY -e QT_X11_NO_MITSHM=1 -v /tmp/.X11-unix:/tmp/
 
 Inside the container, you can then run for example:
 ```
-rosrun planner_tests box2d_push_planner --planning_problem src/planner_tests/data/box2d/planning_problems/obstacle_wall_problem.yaml
+rosrun planner_tests box2d_push_planner --planning_problem src/planner_tests/data/box2d/planning_problems/slalom.yaml
 ```
+There are more example problems in planning_problems folder. Some of the problems are challenging, and better to solve without GUI. 
+When the GUI is running, the planner is slower than when run without.
