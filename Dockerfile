@@ -17,6 +17,7 @@ RUN apt-get update && apt-get install -y \
     virtualenv \
     clang-3.8 \
     vim \
+    cimg-dev \
     sudo
 
 RUN ln -s /usr/bin/clang++-3.8 /usr/bin/clang++
@@ -53,15 +54,15 @@ WORKDIR $WS
 RUN /bin/bash -c '. /opt/ros/lunar/setup.bash; catkin_make -DCMAKE_BUILD_TYPE=Release'
 RUN /bin/bash -c 'echo source ${WS}/devel/setup.bash >> /home/ros/.bashrc'
 
-USER root
-WORKDIR /home/ros/oracle
-ADD oracle ./
-RUN chown -R ros ./
-USER ros
-RUN virtualenv -p python3.5 venv
-RUN /bin/bash -c '. venv/bin/activate; pip install http://download.pytorch.org/whl/cu75/torch-0.2.0.post3-cp35-cp35m-manylinux1_x86_64.whl'
-RUN /bin/bash -c '. venv/bin/activate; pip install -e .'
+# USER root
+# WORKDIR /home/ros/oracle
+# ADD oracle ./
+# RUN chown -R ros ./
+# USER ros
+# RUN virtualenv -p python3.5 venv
+# RUN /bin/bash -c '. venv/bin/activate; pip install http://download.pytorch.org/whl/cu75/torch-0.2.0.post3-cp35-cp35m-manylinux1_x86_64.whl'
+# RUN /bin/bash -c '. venv/bin/activate; pip install -e .'
 
-RUN /bin/bash -c 'echo source /home/ros/oracle/setup.sh >> /home/ros/.bashrc'
-RUN /bin/bash -c 'echo "cd /home/ros/oracle; venv/bin/python python_src/server.py &> /dev/null &" >> /home/ros/.bashrc'
-RUN /bin/bash -c 'echo "cd /home/ros/catkin_ws" >> /home/ros/.bashrc'
+# RUN /bin/bash -c 'echo source /home/ros/oracle/setup.sh >> /home/ros/.bashrc'
+# RUN /bin/bash -c 'echo "cd /home/ros/oracle; venv/bin/python python_src/server.py &> /dev/null &" >> /home/ros/.bashrc'
+# RUN /bin/bash -c 'echo "cd /home/ros/catkin_ws" >> /home/ros/.bashrc'

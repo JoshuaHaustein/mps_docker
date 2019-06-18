@@ -1,18 +1,20 @@
-[submodule "oracle_server"]
-	path = oracle
-	url = git@github.com:JoshuaHaustein/oracle_server.git
 [submodule "box2d_catkin"]
 	path = box2d_catkin
 	url = git@github.com:JoshuaHaustein/box2d_catkin.git
+    branch = collision_access
 [submodule "planner_tests"]
 	path = planner_tests
-	url = git@github.com:JoshuaHaustein/planner_tests.git
+    url = git@github.com:Haoran-SONG/planner_tests.git
+    branch = noTorch
 [submodule "sim_env"]
 	path = sim_env
-	url = git@github.com:JoshuaHaustein/sim_env.git
+	url = git@github.com:Haoran-SONG/sim_env.git
+    branch = master
 [submodule "box2d_sim_env"]
 	path = box2d_sim_env
-	url = git@github.com:JoshuaHaustein/box2d_sim_env.git
+	url = git@github.com:Haoran-SONG/box2d_sim_env.git
+    branch = master
 [submodule "manipulation_planning_suite"]
 	path = manipulation_planning_suite
-	url = git@github.com:JoshuaHaustein/manipulation_planning_suite.git
+	url = git@github.com:Haoran-SONG/manipulation_planning_suite.git
+    branch = noTorch
