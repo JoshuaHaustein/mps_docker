@@ -21,9 +21,10 @@ git submodule update --recursive
 cd box2d_catkin
 git submodule init
 git submodule update --recursive
+cd ..
 ```
 
-Build and run the docker image:
+Build and run the docker image (from the root folder of this repo):
 
 ```
 docker build . -t planner
