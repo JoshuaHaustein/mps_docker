@@ -1,6 +1,7 @@
 FROM ros:lunar-ros-base-xenial
 
 RUN apt-get update && apt-get install -y \
+    apt-utils \
     git \
     gdb \
     ssh \
@@ -11,6 +12,7 @@ RUN apt-get update && apt-get install -y \
     libyaml-cpp-dev \
     libeigen3-dev \
     python3-pip \
+    libqt4-dev \
     qt4-dev-tools \
     libprotobuf-dev \
     protobuf-compiler \
@@ -18,6 +20,8 @@ RUN apt-get update && apt-get install -y \
     clang-3.8 \
     vim \
     cimg-dev \
+    libpng-dev \
+    libjpeg-dev \
     sudo
 
 RUN ln -s /usr/bin/clang++-3.8 /usr/bin/clang++
