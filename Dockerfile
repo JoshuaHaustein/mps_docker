@@ -41,6 +41,7 @@ RUN useradd -ms /bin/bash ros
 
 ARG WS=/home/ros/catkin_ws
 WORKDIR $WS
+ADD data_collection.sh data_collection.sh
 RUN mkdir src
 WORKDIR $WS/src
 ADD manipulation_planning_suite manipulation_planning_suite
