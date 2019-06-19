@@ -28,7 +28,7 @@ RUN ln -s /usr/bin/clang++-3.8 /usr/bin/clang++
 RUN ln -s /usr/bin/clang-3.8 /usr/bin/clang
 
 # Install python dependencies
-RUN /usr/bin/pip3 install jinja2
+RUN /usr/bin/pip3 install jinja2 pyyaml numpy IPython
 
 # Install OMPL
 ARG OMPL_DIR=/ompl
