@@ -2,16 +2,26 @@
 We provide a Dockerfile to ease installation. In order to be able to use the Dockerfile, you need to have
 [Docker](https://www.docker.com/community-edition) installed on your system. 
 
-To install the planner, pull this repository and fetch all submodules
+To install the planner, pull this repository:
+
 ```
 git clone <this-repo>
 cd <this-repo>
+```
+In case you want to use alpha sort, switch to branch ```alpha_sort``` first:
+
+```
+git checkout alpha_sort
+```
+In any case, next initialize and update submodules:
+
+```
+git submodule init
+git submodule update --recursive
+cd box2d_catkin
 git submodule init
 git submodule update --recursive
 ```
-
-Follow the instructions on https://github.com/JoshuaHaustein/box2d_catkin/blob/master/README.md how to properly
-set up the folder ```box2d_catkin```. Start from the ```git submodule``` section.
 
 Build and run the docker image:
 
@@ -26,3 +36,9 @@ rosrun planner_tests box2d_push_planner --planning_problem src/planner_tests/dat
 ```
 There are more example problems in planning_problems folder. Some of the problems are challenging, and better to solve without GUI. 
 When the GUI is running, the planner is slower than when run without.
+
+If there is an error message stating that it can not open a display, try
+```
+xhost +local:docker
+```
+before running the docker container.
